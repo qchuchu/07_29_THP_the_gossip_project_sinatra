@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Modifier un Potin</title>
+  </head>
+  <body>
+    <h1>Voici le gossip n°<%= id %></h1>
+    <p>Auteur : <%= gossip.author %></p>
+    <p>Contenu : <%= gossip.content %></p>
+    <p>Inscrit ci-dessous ce que tu souhaites modifier</p>
+    <form class="" action=<%= "/gossips/#{id}/edit/" %> method="POST">
+      <p>Le nom: <input type="text" name="gossip_author" value=""></p>
+      <p>Le potin: <input type="text" name="gossip_content" value=""></p>
+      <p><input type="submit" name="" value="Edit"></p>
+    </form>
+
+    <a href="/">Revenir à la page des potins</a>
+  </body>
+</html>

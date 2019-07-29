@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Mon gossip n°<%= id %></title>
+  </head>
+  <body>
+    <h1>Voici le gossip n°<%= id %></h1>
+    <p>Auteur : <%= gossip.author %></p>
+    <p>Contenu : <%= gossip.content %></p>
+    <form class="" action=<%= "/gossips/#{id}/" %> method="POST">
+      <p>Ajouter un Commentaire : </p>
+      <textarea name="comment" rows="4" cols="30" placeholder="Hmmm quel potin croustillant"></textarea>
+      <p><input type="submit" name="" value="Submit"></p>
+    </form>
+    <p>Liste des commentaires précédents : </p>
+    <% gossip.comments.each do |comment| %>
+      <p><%= comment %></p>
+    <% end %>
+    <a href="/">Revenir à la page des potins</a>
+  </body>
+</html>
