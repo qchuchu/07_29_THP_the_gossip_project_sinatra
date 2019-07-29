@@ -1,16 +1,44 @@
-<!DOCTYPE html>
-<html lang="en" dir="ltr">
+<!doctype html>
+<html lang="en">
   <head>
+    <!-- Required meta tags -->
     <meta charset="utf-8">
-    <title>Créer un potin</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+    <!-- Font Awesome Javascript -->
+    <script src="https://kit.fontawesome.com/ed5937a94d.js"></script>
+
   </head>
+  <title>Créer un Potin</title>
   <body>
-    <h1>Créer un potin !</h1>
-    <p>Balance to potin via le formulaire ci-dessous</p>
-    <form class="" action="/gossips/new/" method="POST">
-      <p>Saisi ici ton nom: <input type="text" name="gossip_author" value=""></p>
-      <p>Balance ton potin : <input type="text" name="gossip_content" value=""></p>
-      <p><input type="submit" name="" value="Submit"></p>
-    </form>
+    <div class="container">
+      <div class="jumbotron">
+        <p><img src="https://file1.closermag.fr/extension/closermag/design/closermag/images/layout/main-logo.png" alt=""></p>
+        <p class="lead">THE GOSSIP PROJECT</p>
+        <hr class="my-4">
+        <h3>Sois au courant de tous les gossips grâce à ATHENA NOVOTEL</h3>
+      </div>
+
+      <div id="new_gossip">
+        <h1>Créer un potin !</h1>
+        <p>Balance ton potin via le formulaire ci-dessous</p>
+
+        <form class="" action="/gossips/new/" method="POST">
+          <div class="form-group">
+            <label for="gossip_author">Auteur</label>
+            <input type="text" class="form-control" id="gossip_author" name="gossip_author" placeholder="Shakespeare">
+          </div>
+          <div class="form-group">
+            <label for="gossip_content">Balance ton potin !</label>
+            <textarea class="form-control" id="gossip_content" name="gossip_content" placeholder="Je n'ai pas écrit Roméo et Juliette..."></textarea>
+          </div>
+          <p><button type="submit" class="btn btn-primary">Balance le sur les réseaux !</button></p>
+        </form>
+      </div>
+      <p><a class="btn btn-primary" href="/" role="button">Revenir à la page principale</a></p>
+    </div>
   </body>
 </html>

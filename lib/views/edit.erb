@@ -1,20 +1,47 @@
-<!DOCTYPE html>
-<html lang="en" dir="ltr">
+<!doctype html>
+<html lang="en">
   <head>
+    <!-- Required meta tags -->
     <meta charset="utf-8">
-    <title>Modifier un Potin</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+    <!-- Font Awesome Javascript -->
+    <script src="https://kit.fontawesome.com/ed5937a94d.js"></script>
   </head>
   <body>
-    <h1>Voici le gossip n°<%= id %></h1>
-    <p>Auteur : <%= gossip.author %></p>
-    <p>Contenu : <%= gossip.content %></p>
-    <p>Inscrit ci-dessous ce que tu souhaites modifier</p>
-    <form class="" action=<%= "/gossips/#{id}/edit/" %> method="POST">
-      <p>Le nom: <input type="text" name="gossip_author" value=""></p>
-      <p>Le potin: <input type="text" name="gossip_content" value=""></p>
-      <p><input type="submit" name="" value="Edit"></p>
-    </form>
+    <div class="container">
+      <div class="jumbotron">
+        <p><img src="https://file1.closermag.fr/extension/closermag/design/closermag/images/layout/main-logo.png" alt=""></p>
+        <p class="lead">THE GOSSIP PROJECT</p>
+        <hr class="my-4">
+        <h3>Sois au courant de tous les gossips grâce à ATHENA NOVOTEL</h3>
+      </div>
 
-    <a href="/">Revenir à la page des potins</a>
+      <h1>Voici le gossip n°<%= id %></h1>
+      <div class="media">
+        <i class="fas fa-comment-alt fa-3x mr-4"></i>
+        <div class="media-body">
+          <h4 class="mt-0"><%= gossip.author %></h4>
+          <p><%= gossip.content %></p>
+        </div>
+      </div>
+      <h4>Tu veux modifier quoi bébé? *mâche un chewing-gum*</h4>
+      <form class="" action=<%= "/gossips/#{id}/edit/" %> method="POST">
+        <div class="form-group">
+          <label for="gossip_author">L'auteur</label>
+          <input type="text" class="form-control" id="gossip_author" name="gossip_author" value=<%= gossip.author %>>
+        </div>
+        <div class="form-group">
+          <label for="gossip_content">Le contenu</label>
+          <input type="text" class="form-control" name="gossip_content" id="gossip_content" value='<%= gossip.content %>'>
+        </div>
+        <p><button type="submit" class="btn btn-primary">Modifier le Gossip</button></p>
+      </form>
+
+      <p><a class="btn btn-primary" href="/" role="button">Revenir à la page principale</a></p>
+    </div>
   </body>
 </html>
