@@ -30,6 +30,8 @@
         </div>
       </div>
 
+      <p><a class="btn btn-primary" href='<%= "/gossips/#{id}/edit/"%>' role="button">Modifier le Gossip</a></p>
+
       <div id="comments">
         <h4 class='mb-3'><%= 'Liste des commentaires :' if gossip.comments.length > 0 %></h4>
         <% gossip.comments.length.times do |i| %>
